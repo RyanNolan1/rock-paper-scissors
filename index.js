@@ -3,6 +3,15 @@ function getComputerChoice() {
   return choiceArray[Math.floor(Math.random() * 3)];
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".buttons");
+  buttons.forEach(function (currentButton) {
+    currentButton.addEventListener("click", function () {
+      console.log(playRound(currentButton.value, getComputerChoice()));
+    });
+  });
+});
+
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === "Rock" && computerSelection === "Scissors") {
     return "You Win! Rock beats Scissors";
@@ -31,14 +40,3 @@ function playRound(playerSelection, computerSelection) {
     return "You Lose! Scissors beats Paper";
   }
 }
-
-const computerSelection = getComputerChoice();
-
-document.addEventListener('DOMContentLoaded', function() {
-  const buttons = document.querySelectorAll('.buttons');
-  buttons.forEach(function(currentButton) {
-    currentButton.addEventListener('click', function(event) {
-      console.log(currentButton.value);
-    });
-  });
-});
