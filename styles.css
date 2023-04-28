@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'BAD GRUNGE';
+  src: url('fonts/BAD_GRUNGE.ttf') format('ttf');
+  font-family: 'Freshman';
+  src: url('fonts/Freshman.ttf') format('ttf'),
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -9,10 +16,10 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  background-color: yellow;
 }
 
 #container {
-  background-color: yellow;
   min-height: 100vh;
 }
 
@@ -24,24 +31,26 @@ body {
 
 header {
   padding: 1rem;
-  font-size: 4rem;
+  font-size: 8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: BAD GRUNGE;
+  color:red;
 }
 
 #header-tagline {
-  background-color: red;
-  color: yellow;
+  font-family: Freshman;
   max-width: fit-content;
-  font-size: 2.4rem;
+  font-size: 3rem;
+  padding: .5rem;
+  color: black;
 }
 
 #game-area {
   padding: 1rem;
   font-size: 5rem;
   text-align: center;
-  background-color: aqua;
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -51,7 +60,6 @@ header {
 .hands {
   width: 30rem;
   height:12rem;
-  background-color: green;
 }
 
 #choose-buttons {
@@ -73,4 +81,5 @@ header {
 
 .game-score {
   font-size: 3rem;
+  font-family: Freshman;
 }

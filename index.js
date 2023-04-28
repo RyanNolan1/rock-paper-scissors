@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("score-area").innerHTML = playRound(
         currentButton.value,
         getComputerChoice()
-      );
+      ).toUpperCase();
     });
   });
 });
@@ -40,7 +40,7 @@ let computerScore = 0;
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === "Rock" && computerSelection === "Scissors") {
     userScore += 1;
-    document.getElementById("user-score").innerHTML = `score: ${userScore}`;
+    document.getElementById("user-score").innerHTML = `SCORE: ${userScore}`;
     return "You Win! Rock beats Scissors";
   } else if (playerSelection === "Rock" && computerSelection === "Rock") {
     return "Draw! Rock draws with Rock";
