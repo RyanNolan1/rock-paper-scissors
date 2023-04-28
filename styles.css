@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#container {
+  background-color: yellow;
+  min-height: 100vh;
+}
+
+header {
+  padding: 4rem;
+  font-size: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#header-tagline {
+  background-color: red;
+  color: yellow;
+  max-width: fit-content;
+  font-size: 4.4rem;
+}
+
+#game-area {
+  padding: 8rem;
+  font-size: 5rem;
+  text-align: center;
+  background-color: aqua;
+}
+
+#choose-buttons {
+    padding: 4rem;
+    font-size: 5rem;
+    text-align: center;
+    background-color:brown;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:10%;
+  }
+
+.buttons {
+    height:10rem;
+    width:10rem;
+    background-color: aqua;
+    font-size: 2rem;
+}
