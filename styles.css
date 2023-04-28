@@ -32,26 +32,40 @@ header {
 }
 
 #game-area {
-  padding: 8rem;
+  padding: 1rem;
   font-size: 5rem;
   text-align: center;
   background-color: aqua;
+  display: flex;
+  flex-direction: row;
+  gap: 20%;
+  justify-content: center;
+}
+
+.hands {
+  width: 40%;
+  height: 20rem;
+  background-color: green;
+}
+
+#user-hand {
+  width: 40%;
+  height: 20rem;
 }
 
 #choose-buttons {
-    padding: 4rem;
-    font-size: 5rem;
-    text-align: center;
-    background-color:brown;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap:10%;
-  }
+  padding: 1rem;
+  font-size: 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10%;
+}
 
 .buttons {
-    height:10rem;
-    width:10rem;
-    background-color: aqua;
-    font-size: 2rem;
+  height: 10rem;
+  width: 10rem;
+  background-color: aqua;
+  font-size: 2rem;
 }
