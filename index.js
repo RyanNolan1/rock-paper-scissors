@@ -4,7 +4,6 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  console.log(computerSelection + " Computers selection");
 
   if (playerSelection === "Rock" && computerSelection === "Scissors") {
     return "You Win! Rock beats Scissors";
@@ -34,7 +33,13 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-const playerSelection = "Scissors";
 const computerSelection = getComputerChoice();
 
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+    for (let i = 0; i < 5; i++) {
+    const playerSelection = prompt("Please pick either Rock Scissors or Paper");
+    console.log(playRound(playerSelection, computerSelection))
+    }
+}
+
+game()
