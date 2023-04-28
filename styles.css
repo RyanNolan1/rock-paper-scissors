@@ -16,6 +16,12 @@ body {
   min-height: 100vh;
 }
 
+#score-area {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
 header {
   padding: 1rem;
   font-size: 4rem;

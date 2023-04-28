@@ -16,7 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
   buttons.forEach(function (currentButton) {
     currentButton.addEventListener("click", function () {
       getUserHandImages(currentButton.value);
-      console.log(playRound(currentButton.value, getComputerChoice()));
+      document.getElementById("score-area").innerHTML = playRound(
+        currentButton.value,
+        getComputerChoice()
+      );
     });
   });
 });
@@ -45,13 +48,13 @@ function playRound(playerSelection, computerSelection) {
     computerScore += 1;
     document.getElementById(
       "computers-score"
-    ).innerHTML = `score: ${computerScore}`;
+    ).innerHTML = `SCORE ${computerScore}`;
     return "You Lose! Paper beats Rock";
   }
 
   if (playerSelection === "Scissors" && computerSelection === "Paper") {
     userScore += 1;
-    document.getElementById("user-score").innerHTML = `score: ${userScore}`;
+    document.getElementById("user-score").innerHTML = `SCORE ${userScore}`;
     return "You Win! Scissors beats Paper";
   } else if (
     playerSelection === "Scissors" &&
@@ -62,13 +65,13 @@ function playRound(playerSelection, computerSelection) {
     computerScore += 1;
     document.getElementById(
       "computers-score"
-    ).innerHTML = `score: ${computerScore}`;
+    ).innerHTML = `SCORE: ${computerScore}`;
     return "You Lose! Rock beats Scissors";
   }
 
   if (playerSelection === "Paper" && computerSelection === "Rock") {
     userScore += 1;
-    document.getElementById("user-score").innerHTML = `score: ${userScore}`;
+    document.getElementById("user-score").innerHTML = `SCORE ${userScore}`;
     return "You Win! Paper beats Rock";
   } else if (playerSelection === "Paper" && computerSelection === "Paper") {
     return "Draw! Paper draws with Paper";
@@ -76,7 +79,7 @@ function playRound(playerSelection, computerSelection) {
     computerScore += 1;
     document.getElementById(
       "computers-score"
-    ).innerHTML = `score: ${computerScore}`;
+    ).innerHTML = `SCORE ${computerScore}`;
     return "You Lose! Scissors beats Paper";
   }
 }
