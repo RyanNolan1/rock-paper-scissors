@@ -34,11 +34,11 @@ function playRound(playerSelection, computerSelection) {
 
 const computerSelection = getComputerChoice();
 
-// function game() {
-//   for (let i = 0; i < 5; i++) {
-//     const playerSelection = prompt("Please pick either Rock Scissors or Paper");
-//     console.log(playRound(playerSelection, computerSelection));
-//   }
-// }
-
-// game();
+document.addEventListener('DOMContentLoaded', function() {
+  const buttons = document.querySelectorAll('.buttons');
+  buttons.forEach(function(currentButton) {
+    currentButton.addEventListener('click', function(event) {
+      console.log(currentButton.value);
+    });
+  });
+});
