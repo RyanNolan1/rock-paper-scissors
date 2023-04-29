@@ -73,8 +73,25 @@ header {
 .buttons {
   height: 10rem;
   width: 10rem;
-  background-color: aqua;
   font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 100px;
+  border-width: 4px;
+  border-color: white;
+  border-style: solid;
+}
+
+.button-images {
+  height: 6rem;
+  filter: invert(1);
+}
+
+.buttons:hover {
+  background-color: red;
+  cursor: pointer;
 }
 
 #score-area {
@@ -101,3 +118,4 @@ header {
   color:white;
   background-color: red;
 }
+
