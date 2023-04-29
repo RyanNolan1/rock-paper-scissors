@@ -30,7 +30,6 @@ body {
 }
 
 header {
-  padding: 1rem;
   font-size: 8rem;
   display: flex;
   flex-direction: column;
@@ -43,7 +42,6 @@ header {
   font-family: Freshman;
   max-width: fit-content;
   font-size: 3rem;
-  padding: .5rem;
   color: black;
 }
 
@@ -79,7 +77,27 @@ header {
   font-size: 2rem;
 }
 
+#score-area {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 4rem;
+  color: red;
+}
+
 .game-score {
   font-size: 3rem;
-  font-family: Freshman;
+  font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#user-score {
+  background-color: black;
+  color: white;
+}
+
+#computers-score {
+  color:white;
+  background-color: red;
 }
