@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'BAD GRUNGE';
+  src: url('fonts/BAD_GRUNGE.ttf') format('ttf');
+  font-family: 'Freshman';
+  src: url('fonts/Freshman.ttf') format('ttf'),
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: yellow;
+}
+
+#container {
+  min-height: 100vh;
+}
+
+#score-area {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+header {
+  font-size: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: BAD GRUNGE;
+  color:red;
+}
+
+#header-tagline {
+  font-family: Freshman;
+  max-width: fit-content;
+  font-size: 3rem;
+  color: black;
+}
+
+#game-area {
+  padding: 1rem;
+  font-size: 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.hands {
+  width: 30rem;
+  height:12rem;
+}
+
+#choose-buttons {
+  padding: 1rem;
+  font-size: 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10%;
+}
+
+.buttons {
+  height: 10rem;
+  width: 10rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 100px;
+  border-width: 4px;
+  border-color: white;
+  border-style: solid;
+}
+
+.button-images {
+  height: 6rem;
+  filter: invert(1);
+}
+
+.buttons:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+#score-area {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 3rem;
+  color: red;
+}
+
+.game-score {
+  font-size: 3rem;
+  font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#user-score {
+  background-color: black;
+  color: white;
+}
+
+#computers-score {
+  color:white;
+  background-color: red;
+}
+
