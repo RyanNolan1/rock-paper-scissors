@@ -2,11 +2,11 @@ function getComputerChoice() {
   const choiceArray = ["Rock", "Paper", "Scissors"];
   let computerChoice = choiceArray[Math.floor(Math.random() * 3)];
   if (computerChoice === "Rock") {
-    document.getElementById("computer-hand").src = "./images/rock.jpg";
+    document.getElementById("computer-hand").src = "./images/Right Rock.png";
   } else if (computerChoice === "Paper") {
-    document.getElementById("computer-hand").src = "./images/paper.jpg";
+    document.getElementById("computer-hand").src = "./images/Right Paper.png";
   } else if (computerChoice === "Scissors") {
-    document.getElementById("computer-hand").src = "./images/scissors.jpg";
+    document.getElementById("computer-hand").src = "./images/Right Scissors.png";
   }
   return computerChoice;
 }
@@ -26,11 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function getUserHandImages(userHandValue) {
   if (userHandValue === "Rock") {
-    document.getElementById("user-hand").src = "./images/rock.jpg";
+    document.getElementById("user-hand").src = "./images/Left Rock.png";
   } else if (userHandValue === "Paper") {
-    document.getElementById("user-hand").src = "./images/paper.jpg";
+    document.getElementById("user-hand").src = "./images/Left Paper.png";
   } else if (userHandValue === "Scissors") {
-    document.getElementById("user-hand").src = "./images/scissors.jpg";
+    document.getElementById("user-hand").src = "./images/Left Scissors.png";
   }
 }
 
