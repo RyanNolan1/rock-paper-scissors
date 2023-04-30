@@ -77,7 +77,7 @@ function playRound(playerSelection, computerSelection) {
   if (playerSelection === "Paper" && computerSelection === "Rock") {
     userScore += 1;
     document.getElementById("user-score").innerHTML = `SCORE ${userScore}`;
-    return ["You Win! Paper beats Rock", (userScore += 1)];
+    return ["You Win! Paper beats Rock", userScore];
   } else if (playerSelection === "Paper" && computerSelection === "Paper") {
     return ["Draw! Paper draws with Paper"];
   } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
