@@ -6,20 +6,28 @@ function getComputerChoice() {
   } else if (computerChoice === "Paper") {
     document.getElementById("computer-hand").src = "./images/Right Paper.png";
   } else if (computerChoice === "Scissors") {
-    document.getElementById("computer-hand").src = "./images/Right Scissors.png";
+    document.getElementById("computer-hand").src =
+      "./images/Right Scissors.png";
   }
   return computerChoice;
 }
+
+let userScore = 0;
+let computerScore = 0;
+let computerChoice;
+let buttonValue;
+let playGroundFunctionResult;
 
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".buttons");
   buttons.forEach(function (currentButton) {
     currentButton.addEventListener("click", function () {
-      getUserHandImages(currentButton.value);
-      document.getElementById("score-area").innerHTML = playRound(
-        currentButton.value,
-        getComputerChoice()
-      ).toUpperCase();
+      computerChoice = getComputerChoice();
+      buttonValue = currentButton.value;
+      playGroundFunctionResult = playRound(buttonValue, computerChoice);
+      getUserHandImages(buttonValue);
+      document.getElementById("score-area").innerHTML =
+        playGroundFunctionResult[0].toUpperCase();
     });
   });
 });
@@ -34,52 +42,49 @@ function getUserHandImages(userHandValue) {
   }
 }
 
-let userScore = 0;
-let computerScore = 0;
-
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === "Rock" && computerSelection === "Scissors") {
     userScore += 1;
     document.getElementById("user-score").innerHTML = `SCORE: ${userScore}`;
-    return "You Win! Rock beats Scissors";
+    return ["You Win! Rock beats Scissors", userScore];
   } else if (playerSelection === "Rock" && computerSelection === "Rock") {
-    return "Draw! Rock draws with Rock";
+    return ["Draw! Rock draws with Rock"];
   } else if (playerSelection === "Rock" && computerSelection === "Paper") {
     computerScore += 1;
     document.getElementById(
       "computers-score"
     ).innerHTML = `SCORE ${computerScore}`;
-    return "You Lose! Paper beats Rock";
+    return ["You Lose! Paper beats Rock", computerScore];
   }
 
   if (playerSelection === "Scissors" && computerSelection === "Paper") {
     userScore += 1;
     document.getElementById("user-score").innerHTML = `SCORE ${userScore}`;
-    return "You Win! Scissors beats Paper";
+    return ["You Win! Scissors beats Paper", userScore];
   } else if (
     playerSelection === "Scissors" &&
     computerSelection === "Scissors"
   ) {
-    return "Draw! Scissors draws with Scissors";
+    return ["Draw! Scissors draws with Scissors"];
   } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
     computerScore += 1;
     document.getElementById(
       "computers-score"
     ).innerHTML = `SCORE: ${computerScore}`;
-    return "You Lose! Rock beats Scissors";
+    return ["You Lose! Rock beats Scissors", computerScore];
   }
 
   if (playerSelection === "Paper" && computerSelection === "Rock") {
     userScore += 1;
     document.getElementById("user-score").innerHTML = `SCORE ${userScore}`;
-    return "You Win! Paper beats Rock";
+    return ["You Win! Paper beats Rock", userScore];
   } else if (playerSelection === "Paper" && computerSelection === "Paper") {
-    return "Draw! Paper draws with Paper";
+    return ["Draw! Paper draws with Paper"];
   } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
     computerScore += 1;
     document.getElementById(
       "computers-score"
     ).innerHTML = `SCORE ${computerScore}`;
-    return "You Lose! Scissors beats Paper";
+    return ["You Lose! Scissors beats Paper", computerScore];
   }
 }
