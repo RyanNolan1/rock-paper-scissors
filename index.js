@@ -37,10 +37,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function finishGame() {
    if (userScore === 10) {
-    console.log("USER WINS!")
+    document.getElementById("winner-image").src = "./images/user-wins.png";
+    document.getElementById("winner-message").innerHTML = "USER WINS!";
+     openNav()
    } else if (computerScore === 10) {
-    console.log("COMPUTER WINS!")
+    document.getElementById("winner-image").src = "./images/computer-wins.webp";
+    document.getElementById("winner-message").innerHTML = "COMPUTER WINS!";
+     openNav()
    }
+}
+
+function openNav() {
+  document.getElementById("win-screen").style.display = "block";
 }
 
 function getUserHandImages(userHandValue) {
