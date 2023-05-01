@@ -9,11 +9,21 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
+    <div id="win-screen" class="overlay">
+      <div class="overlay-content">
+        <img id="winner-image">
+        <div id="winning-details">
+        <p id="winner-message"></p>
+        <p id="winner-score"></p>
+        <p id="play-again" onClick="window.location.reload();">PLAY AGAIN</p>
+      </div>
+      </div>
+    </div>
     <section id="container">
       <header>
-        ROCK PAPER SCISSORS
-        <div id="header-tagline">"USER vs COMPUTER"</div>
+        <h1>ROCK PAPER SCISSORS</h1>
       </header>
+      <h2 id="header-tagline">"HUMAN vs MACHINE"</h2>
       <section id="score-area">FIRST TO 10 WINS!</section>
       <section id="game-area">
         <section class="hand-and-score">
@@ -26,26 +36,14 @@
         </section>
       </section>
       <section id="choose-buttons">
-        <button
-          class="buttons"
-          id="rock-button"
-          value="Rock"
-        >
-          <img class="button-images"  src="./images/Rock.png">
+        <button class="buttons" id="rock-button" value="Rock">
+          <img class="button-images" src="./images/Rock.png" />
         </button>
-        <button
-          class="buttons"
-          id="paper-button"
-          value="Paper"
-        >
-        <img class="button-images" src="./images/Paper.png">
+        <button class="buttons" id="paper-button" value="Paper">
+          <img class="button-images" src="./images/Paper.png" />
         </button>
-        <button
-          class="buttons"
-          id="scissors-button"
-          value="Scissors"
-        >
-        <img class="button-images"  src="./images/Scissors.png">
+        <button class="buttons" id="scissors-button" value="Scissors">
+          <img class="button-images" src="./images/Scissors.png" />
         </button>
       </section>
     </section>

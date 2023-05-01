@@ -26,11 +26,32 @@ document.addEventListener("DOMContentLoaded", function () {
       buttonValue = currentButton.value;
       playGroundFunctionResult = playRound(buttonValue, computerChoice);
       getUserHandImages(buttonValue);
+      if (userScore === 10 || computerScore === 10) {
+        finishGame(userScore, computerScore);
+      }
       document.getElementById("score-area").innerHTML =
         playGroundFunctionResult[0].toUpperCase();
     });
   });
 });
+
+function finishGame() {
+   if (userScore === 10) {
+    document.getElementById("winner-image").src = "./images/user-wins.png";
+    document.getElementById("winner-message").innerHTML = "HUMAN WINS!";
+    document.getElementById("winner-score").innerHTML = `HUMAN: ${userScore} MACHINE: ${computerScore}`;
+     openNav()
+   } else if (computerScore === 10) {
+    document.getElementById("winner-image").src = "./images/computer-wins.webp";
+    document.getElementById("winner-message").innerHTML = "MACHINE WINS!";
+    document.getElementById("winner-score").innerHTML = `MACHINE: ${computerScore} HUMAN: ${userScore}`;
+     openNav()
+   }
+}
+
+function openNav() {
+  document.getElementById("win-screen").style.display = "block";
+}
 
 function getUserHandImages(userHandValue) {
   if (userHandValue === "Rock") {
