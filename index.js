@@ -26,11 +26,22 @@ document.addEventListener("DOMContentLoaded", function () {
       buttonValue = currentButton.value;
       playGroundFunctionResult = playRound(buttonValue, computerChoice);
       getUserHandImages(buttonValue);
+      if (userScore === 10 || computerScore === 10) {
+        finishGame(userScore, computerScore);
+      }
       document.getElementById("score-area").innerHTML =
         playGroundFunctionResult[0].toUpperCase();
     });
   });
 });
+
+function finishGame() {
+   if (userScore === 10) {
+    console.log("USER WINS!")
+   } else if (computerScore === 10) {
+    console.log("COMPUTER WINS!")
+   }
+}
 
 function getUserHandImages(userHandValue) {
   if (userHandValue === "Rock") {
