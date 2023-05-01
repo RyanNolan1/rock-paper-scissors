@@ -38,11 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
 function finishGame() {
    if (userScore === 10) {
     document.getElementById("winner-image").src = "./images/user-wins.png";
-    document.getElementById("winner-message").innerHTML = "USER WINS!";
+    document.getElementById("winner-message").innerHTML = "HUMAN WINS!";
      openNav()
    } else if (computerScore === 10) {
     document.getElementById("winner-image").src = "./images/computer-wins.webp";
-    document.getElementById("winner-message").innerHTML = "COMPUTER WINS!";
+    document.getElementById("winner-message").innerHTML = "MACHINE WINS!";
      openNav()
    }
 }
