@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
       buttonValue = currentButton.value;
       playGroundFunctionResult = playRound(buttonValue, computerChoice);
       getUserHandImages(buttonValue);
-      if (userScore === 5 || computerScore === 5) {
+      if (userScore === 8 || computerScore === 8) {
         finishGame(userScore, computerScore);
       }
       document.getElementById("score-area").innerHTML =
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function finishGame() {
-  if (userScore === 5) {
+  if (userScore === 8) {
     document.getElementById("winner-image").src = "./images/user-wins.png";
     document.getElementById("winner-message").innerHTML = "HUMAN WINS!";
     document.getElementById("human-audio").play();
@@ -44,7 +44,7 @@ function finishGame() {
       "winner-score"
     ).innerHTML = `HUMAN: ${userScore} MACHINE: ${computerScore}`;
     openNav();
-  } else if (computerScore === 5) {
+  } else if (computerScore === 8) {
     document.getElementById("winner-image").src = "./images/computer-wins.webp";
     document.getElementById("winner-message").innerHTML = "MACHINE WINS!";
     document.getElementById("machine-audio").play();
