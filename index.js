@@ -16,7 +16,7 @@ let userScore = 0;
 let computerScore = 0;
 let computerChoice;
 let buttonValue;
-let playGroundFunctionResult;
+let playRoundFunctionResult;
 
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".buttons");
@@ -24,13 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
     currentButton.addEventListener("click", function () {
       computerChoice = getComputerChoice();
       buttonValue = currentButton.value;
-      playGroundFunctionResult = playRound(buttonValue, computerChoice);
+      playRoundFunctionResult = playRound(buttonValue, computerChoice);
       getUserHandImages(buttonValue);
       if (userScore === 8 || computerScore === 8) {
         finishGame(userScore, computerScore);
       }
       document.getElementById("score-area").innerHTML =
-        playGroundFunctionResult[0].toUpperCase();
+        playRoundFunctionResult[0].toUpperCase();
     });
   });
 });
