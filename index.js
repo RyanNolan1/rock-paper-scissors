@@ -36,17 +36,23 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function finishGame() {
-   if (userScore === 10) {
+  if (userScore === 10) {
     document.getElementById("winner-image").src = "./images/user-wins.png";
     document.getElementById("winner-message").innerHTML = "HUMAN WINS!";
-    document.getElementById("winner-score").innerHTML = `HUMAN: ${userScore} MACHINE: ${computerScore}`;
-     openNav()
-   } else if (computerScore === 10) {
+    document.getElementById("human-audio").play();
+    document.getElementById(
+      "winner-score"
+    ).innerHTML = `HUMAN: ${userScore} MACHINE: ${computerScore}`;
+    openNav();
+  } else if (computerScore === 10) {
     document.getElementById("winner-image").src = "./images/computer-wins.webp";
     document.getElementById("winner-message").innerHTML = "MACHINE WINS!";
-    document.getElementById("winner-score").innerHTML = `MACHINE: ${computerScore} HUMAN: ${userScore}`;
-     openNav()
-   }
+    document.getElementById("machine-audio").play();
+    document.getElementById(
+      "winner-score"
+    ).innerHTML = `MACHINE: ${computerScore} HUMAN: ${userScore}`;
+    openNav();
+  }
 }
 
 function openNav() {
