@@ -25,7 +25,7 @@ Here are the key features of the Rock, Paper, Scissors game:
 ## Getting Started
 
 1. Clone the repository:
-<br> git clone https://github.com/RyanNolan1/rock-paper-scissors.git
+<br>git clone https://github.com/RyanNolan1/rock-paper-scissors.git
 
 2.Open the index.html file in your web browser to start playing the game.
 
